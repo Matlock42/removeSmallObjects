@@ -15,10 +15,11 @@ class RemoveSmallObjects(inkex.EffectExtension):
         if lock_ratio:
             height_threshold = width_threshold
 
-        for element in self.svg.get_elements_by_type(inkex.PathElement):
-            bbox = element.bounding_box()
-            if bbox.width < width_threshold or bbox.height < height_threshold:
-                element.delete()
+        for element in self.svg.descendants().filter(inkex.PathElement):
+            if element.is_visible():
+                bbox = element.shape_box()
+                if bbox.width < width_threshold and bbox.height < height_threshold:
+                    element.delete()
 
 if __name__ == '__main__':
     RemoveSmallObjects().run()
