@@ -16,7 +16,7 @@ Clone or download into the extensions folder for Inkscape. Then, restart Inkscap
 #### Windows
 
 ```
-%AppData%\Roaming\inkscape\extensions
+%AppData%\inkscape\extensions
 ```
 
 #### Linux
