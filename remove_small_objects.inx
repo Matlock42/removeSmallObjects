@@ -2,10 +2,9 @@
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
 	<_name>Remove Small Objects</_name>
 	<id>org.inkscape.extensions.removesmallobjects</id>
-	<param name="width_threshold" type="float" _gui-text="Width Threshold" appearance="full">10.0</param>
-	<param name="height_threshold" type="float" _gui-text="Height Threshold" appearance="full">10.0</param>
-	<param name="lock_ratio" type="boolean" _gui-text="Lock Width and Height" appearance="full">false</param>
-	<effect>
+	<param name="width_threshold" type="float" precision="2" min="0" _gui-text="Width Threshold">0.5</param>
+	<param name="height_threshold" type="float" precision="2" min="0" _gui-text="Height Threshold">0.5</param>
+	<effect needs-live-preview="false">
 		<object-type>all</object-type>
 		<effects-menu>
 			<submenu _name="Developer Examples"/>
